@@ -82,8 +82,8 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(#f06 1px, transparent 1px),
-    linear-gradient(90deg, #f06 1px, transparent 1px);
+    linear-gradient(#f03 1px, transparent 1px),
+    linear-gradient(90deg, #f03 1px, transparent 1px);
   background-size: 100px 100px;
   pointer-events: none;
   z-index: -1;
