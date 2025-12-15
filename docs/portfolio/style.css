@@ -530,14 +530,20 @@ a:hover {
 .social-proof {
   margin-top: var(--space-3xl);
   padding: var(--space-2xl);
-  background: var(--bg-secondary);
-  border-radius: 12px;
+  background: var(--bg-primary);
+  border-radius: 16px;
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 30px rgb(0 255 136 / 15%);
 }
 
 .social-proof h3 {
   font-size: var(--font-size-2xl);
   text-align: center;
   margin-bottom: var(--space-2xl);
+  color: var(--primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .testimonial-grid {
@@ -547,24 +553,51 @@ a:hover {
 }
 
 .testimonial {
-  padding: var(--space-lg);
-  background: white;
-  border-radius: 8px;
-  box-shadow: var(--shadow-sm);
+  padding: var(--space-xl);
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
   margin: 0;
+  border: 2px solid var(--border);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.testimonial::before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--primary);
+  opacity: 0.3;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgb(0 255 136 / 20%);
+  border-color: var(--primary);
 }
 
 .testimonial p {
   font-size: var(--font-size-lg);
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: var(--space-md);
   font-style: italic;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
 }
 
 .testimonial cite {
   font-style: normal;
-  color: var(--text-secondary);
+  color: var(--primary);
   font-size: var(--font-size-sm);
+  font-weight: 600;
+  display: block;
+  margin-top: var(--space-md);
 }
 
 /* ========================================
