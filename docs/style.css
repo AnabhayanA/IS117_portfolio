@@ -4,17 +4,17 @@
 
 :root {
   /* Colors - Bold & Aggressive */
-  --color-primary: #0f8;
-  --color-primary-dark: #00cc6f;
-  --color-secondary: #f06;
-  --color-secondary-dark: #cc0052;
+  --color-primary: #0af;
+  --color-primary-dark: #08c;
+  --color-secondary: #f03;
+  --color-secondary-dark: #c02;
   --color-accent: #ffd700;
   --color-accent-bright: #ffed4e;
   --color-text: #fff;
   --color-text-secondary: #d4d4d4;
   --color-bg: #0a0a0a;
   --color-bg-alt: #1a1a1a;
-  --color-bg-gradient: linear-gradient(135deg, #0f8 0%, #00d4ff 100%);
+  --color-bg-gradient: linear-gradient(135deg, #0af 0%, #00d4ff 100%);
   --color-border: #333;
   
   /* Spacing */

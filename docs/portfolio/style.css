@@ -14,10 +14,10 @@
   --font-size-3xl: clamp(3rem, 2.07rem + 4.63vw, 8rem);
   
   /* Color Palette - Bold & Edgy */
-  --primary: #0f8;
-  --primary-dark: #00cc6f;
-  --secondary: #f06;
-  --secondary-dark: #cc0052;
+  --primary: #0af;
+  --primary-dark: #08c;
+  --secondary: #f03;
+  --secondary-dark: #c02;
   --accent: #ffd700;
   --accent-bright: #ffed4e;
   --text-primary: #fff;
@@ -25,8 +25,8 @@
   --bg-primary: #0a0a0a;
   --bg-secondary: #1a1a1a;
   --border: #444;
-  --gradient-primary: linear-gradient(135deg, #0f8 0%, #00d4ff 100%);
-  --gradient-danger: linear-gradient(135deg, #f06 0%, #ff6b35 100%);
+  --gradient-primary: linear-gradient(135deg, #0af 0%, #00d4ff 100%);
+  --gradient-danger: linear-gradient(135deg, #f03 0%, #ff6b35 100%);
   
   /* Spacing Scale */
   --space-xs: 0.5rem;

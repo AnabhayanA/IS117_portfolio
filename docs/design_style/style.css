@@ -19,13 +19,13 @@ html {
   --space-3: calc(var(--unit) * 2);  /* 16px */
   --space-4: calc(var(--unit) * 3);  /* 24px */
   --space-5: calc(var(--unit) * 4);  /* 32px */
-  --color-primary: #6200EE;
-  --color-primary-dark: #3700b3;
-  --color-primary-light: #8c45ff;
-  --color-secondary: #03DAC6;
-  --color-secondary-light: #66fff9;
-  --color-accent: #FF6B9D;
-  --color-accent-light: #FF9CBE;
+  --color-primary: #06F;
+  --color-primary-dark: #0052CC;
+  --color-primary-light: #39F;
+  --color-secondary: #F00;
+  --color-secondary-light: #F66;
+  --color-accent: #DC143C;
+  --color-accent-light: #FF6B6B;
   --color-tertiary: #FFB703;
   --color-info: #0077B6;
   --surface: #FFF;
@@ -141,7 +141,7 @@ a {
 =============================== */
 .hero {
   position: relative;
-  background: linear-gradient(135deg, #FF6B9D 0%, #6200EE 50%, #03DAC6 100%);
+  background: linear-gradient(135deg, #DC143C 0%, #06F 50%, #F00 100%);
   color: #fff;
   padding: 5rem 0;
   overflow: hidden;
