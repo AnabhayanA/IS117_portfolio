@@ -11,7 +11,7 @@
   --color-accent: #ffd700;
   --color-accent-bright: #ffed4e;
   --color-text: #fff;
-  --color-text-secondary: #b4b4b4;
+  --color-text-secondary: #d4d4d4;
   --color-bg: #0a0a0a;
   --color-bg-alt: #1a1a1a;
   --color-bg-gradient: linear-gradient(135deg, #0f8 0%, #00d4ff 100%);
@@ -181,12 +181,29 @@ body::after {
 .nav-links a {
   text-decoration: none;
   color: var(--color-text);
-  font-weight: 500;
-  transition: color var(--transition-base);
+  font-weight: 600;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width var(--transition-base);
 }
 
 .nav-links a:hover {
   color: var(--color-primary);
+  text-shadow: 0 0 10px rgb(0 255 136 / 30%);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 @media (width <= 768px) {
@@ -252,11 +269,13 @@ body::after {
   background: transparent;
   color: var(--color-primary);
   border: 2px solid var(--color-primary);
+  font-weight: 600;
 }
 
 .btn-secondary:hover {
   background: var(--color-primary);
-  color: white;
+  color: #0a0a0a;
+  font-weight: 700;
 }
 
 /* ========================================
@@ -390,7 +409,7 @@ body::after {
   padding: var(--spacing-xl);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
-  border: 2px solid var(--color-border);
+  border: 2px solid #444;
   position: relative;
   overflow: hidden;
 }
@@ -434,13 +453,15 @@ body::after {
 .project-card h3 {
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-sm);
-  color: var(--color-text);
+  color: #fff;
+  font-weight: 700;
 }
 
 .project-card p {
   color: var(--color-text-secondary);
   margin-bottom: var(--spacing-md);
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 1.05rem;
 }
 
 .card-features {

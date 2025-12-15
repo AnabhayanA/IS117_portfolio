@@ -21,10 +21,10 @@
   --accent: #ffd700;
   --accent-bright: #ffed4e;
   --text-primary: #fff;
-  --text-secondary: #b4b4b4;
+  --text-secondary: #d4d4d4;
   --bg-primary: #0a0a0a;
   --bg-secondary: #1a1a1a;
-  --border: #333;
+  --border: #444;
   --gradient-primary: linear-gradient(135deg, #0f8 0%, #00d4ff 100%);
   --gradient-danger: linear-gradient(135deg, #f06 0%, #ff6b35 100%);
   

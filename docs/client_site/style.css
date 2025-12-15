@@ -15,12 +15,12 @@
   
   /* Neutral Palette - Dark Mode */
   --text-primary: #fff;
-  --text-secondary: #b4b4b4;
-  --text-muted: #808080;
+  --text-secondary: #d4d4d4;
+  --text-muted: #999;
   --bg-primary: #0a0a0a;
   --bg-secondary: #1a1a1a;
   --bg-dark: #000;
-  --border: #333;
+  --border: #444;
   
   /* Typography */
   --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
