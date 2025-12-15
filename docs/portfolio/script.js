@@ -1,7 +1,41 @@
 /**
  * PORTFOLIO SITE - INTERACTIVITY & INTEGRATIONS
- * Features: Zapier webhook integration, smooth scroll, animations
+ * Features: Zapier webhook integration, smooth scroll, animations, hamburger menu
  */
+
+// ========================================
+// HAMBURGER MENU
+// ========================================
+
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !isExpanded);
+  });
+
+  // Close menu when clicking links
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+      navToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
 
 // ========================================
 // CONFIGURATION
