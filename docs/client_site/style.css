@@ -5,22 +5,22 @@
    ======================================== */
 
 :root {
-  /* Brand Colors - Streetwear Aesthetic */
-  --primary: #000;
-  --primary-dark: #111;
-  --secondary: #ff6b35;
-  --accent: #ffd23f;
-  --danger: #ef4444;
-  --highlight: #00e5ff;
+  /* Brand Colors - Aggressive Streetwear */
+  --primary: #f06;
+  --primary-dark: #cc0052;
+  --secondary: #0f8;
+  --accent: #ffd700;
+  --danger: #f33;
+  --highlight: #00d4ff;
   
-  /* Neutral Palette */
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
-  --bg-primary: #fff;
-  --bg-secondary: #f8fafc;
-  --bg-dark: #0f172a;
-  --border: #e2e8f0;
+  /* Neutral Palette - Dark Mode */
+  --text-primary: #fff;
+  --text-secondary: #b4b4b4;
+  --text-muted: #808080;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-dark: #000;
+  --border: #333;
   
   /* Typography */
   --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
@@ -73,7 +73,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Subtle grid background for sneaker aesthetic */
+/* Bold grid background */
 body::before {
   content: '';
   position: fixed;
@@ -82,12 +82,27 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(rgb(0 0 0 / 2%) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(0 0 0 / 2%) 1px, transparent 1px);
-  background-size: 50px 50px;
+    linear-gradient(#f06 1px, transparent 1px),
+    linear-gradient(90deg, #f06 1px, transparent 1px);
+  background-size: 100px 100px;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.03;
+}
+
+/* Glowing orb effect */
+body::after {
+  content: '';
+  position: fixed;
+  bottom: 10%;
+  left: 10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgb(255 0 102 / 15%) 0%, transparent 70%);
+  filter: blur(80px);
+  animation: pulse 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
 }
 
 img {
