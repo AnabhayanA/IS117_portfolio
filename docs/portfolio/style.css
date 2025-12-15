@@ -586,9 +586,10 @@ a:hover {
   line-height: 1.8;
   margin-bottom: var(--space-md);
   font-style: italic;
-  color: var(--text-primary);
+  color: #fff;
   position: relative;
   z-index: 1;
+  font-weight: 400;
 }
 
 .testimonial cite {
