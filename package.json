@@ -1,0 +1,35 @@
+{
+  "name": "is117-portfolio",
+  "version": "1.0.0",
+  "description": "IS117 Final Project: Professional Web Portfolio System showcasing AI + IT expertise",
+  "main": "index.js",
+  "scripts": {
+    "lint:html": "htmlhint 'docs/**/*.html'",
+    "lint:css": "stylelint 'docs/**/*.css'",
+    "lint": "npm run lint:html && npm run lint:css",
+    "prepare": "husky install",
+    "lhci": "lhci autorun",
+    "lhci:upload": "lhci upload"
+  },
+  "keywords": [
+    "portfolio",
+    "web-design",
+    "responsive",
+    "accessibility",
+    "performance"
+  ],
+  "author": "Anabhayan Ahruran",
+  "license": "MIT",
+  "lint-staged": {
+    "*.html": "htmlhint",
+    "*.css": "stylelint"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.14.0",
+    "htmlhint": "^1.1.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}
