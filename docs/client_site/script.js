@@ -91,7 +91,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 function animateCounter(element, target, duration = 2000) {
   const start = 0;
-  const increment = target / (duration / 16); // 60fps
+  const increment = target / (duration / 16);
   let current = start;
   
   const updateCounter = () => {
@@ -107,36 +107,23 @@ function animateCounter(element, target, duration = 2000) {
   updateCounter();
 }
 
-// Initialize counters when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  // Observer for counter animations
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-        const target = parseInt(entry.target.getAttribute('data-count'));
-        animateCounter(entry.target, target);
-        entry.target.classList.add('counted');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+// Start counters when they come into view
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.animated) {
+      const target = parseInt(entry.target.getAttribute('data-count'));
+      animateCounter(entry.target, target);
+      entry.target.dataset.animated = 'true';
+    }
+  });
+}, { threshold: 0.1 });
 
-  // Observe all counters
+// Observe all counters
+setTimeout(() => {
   document.querySelectorAll('.counter').forEach(counter => {
     counterObserver.observe(counter);
   });
-  
-  // Trigger animation for counters already in view on page load
-  setTimeout(() => {
-    document.querySelectorAll('.counter').forEach(counter => {
-      const rect = counter.getBoundingClientRect();
-      if (rect.top >= 0 && rect.bottom <= window.innerHeight && !counter.classList.contains('counted')) {
-        const target = parseInt(counter.getAttribute('data-count'));
-        animateCounter(counter, target);
-        counter.classList.add('counted');
-      }
-    });
-  }, 500);
-});
+}, 100);
 
 // ========================================
 // PARALLAX EFFECT FOR HERO PARTICLES
