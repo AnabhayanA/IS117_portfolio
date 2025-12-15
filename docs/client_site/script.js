@@ -86,6 +86,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ========================================
+// ANIMATED NUMBER COUNTERS
+// ========================================
+
+function animateCounter(element, target, duration = 2000) {
+  const start = 0;
+  const increment = target / (duration / 16); // 60fps
+  let current = start;
+  
+  const updateCounter = () => {
+    current += increment;
+    if (current < target) {
+      element.textContent = Math.floor(current);
+      requestAnimationFrame(updateCounter);
+    } else {
+      element.textContent = target;
+    }
+  };
+  
+  updateCounter();
+}
+
+// Observer for counter animations
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+      const target = parseInt(entry.target.getAttribute('data-count'));
+      animateCounter(entry.target, target);
+      entry.target.classList.add('counted');
+    }
+  });
+}, { threshold: 0.5 });
+
+// Observe all counters
+document.querySelectorAll('.counter').forEach(counter => {
+  counterObserver.observe(counter);
+});
+
+// ========================================
 // PARALLAX EFFECT FOR HERO PARTICLES
 // ========================================
 
